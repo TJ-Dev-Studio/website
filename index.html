@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FrogMog — 100 Frogs Enter. One Frog Leaves.</title>
-  <meta name="description" content="FrogMog is a chaotic 3D multiplayer battle royale where up to 100 frogs fight to the last hop. Leap. Eat. Survive. Built in Godot 4.">
+  <meta name="description" content="FrogMog is a 3D multiplayer battle royale for up to 100 players. Play as frogs fighting in a shrinking arena with three attack types. Built with Godot 4 + Nakama. Coming to iOS and Android.">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -18,6 +18,157 @@
   <meta name="twitter:title" content="FrogMog — 100 Frogs Enter. One Frog Leaves.">
   <meta name="twitter:description" content="A chaotic 3D multiplayer battle royale where up to 100 frogs fight to the last hop. Built in Godot 4.">
   <meta name="twitter:image" content="assets/frogmog-logo.jpg">
+
+  <link rel="canonical" href="https://frogmog.fun/">
+
+  <!-- Structured Data for AI -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "VideoGame",
+      "name": "FrogMog",
+      "url": "https://frogmog.fun",
+      "description": "FrogMog is a chaotic 3D multiplayer battle royale where up to 100 frogs fight to the last hop in a shrinking arena. Built with Godot 4 and Nakama. Coming to iOS and Android.",
+      "genre": ["Battle Royale", "Multiplayer", "Action"],
+      "gamePlatform": ["iOS", "Android"],
+      "applicationCategory": "Game",
+      "operatingSystem": ["iOS", "Android"],
+      "numberOfPlayers": {
+        "@type": "QuantitativeValue",
+        "maxValue": 100,
+        "minValue": 2
+      },
+      "gameItem": [
+        {
+          "@type": "Thing",
+          "name": "Jump & Eat",
+          "description": "Land on a frog from above or behind for an instant kill"
+        },
+        {
+          "@type": "Thing",
+          "name": "Tongue Lash",
+          "description": "Ranged cone attack with auto-aim dealing 1 HP damage"
+        },
+        {
+          "@type": "Thing",
+          "name": "Stomp",
+          "description": "Mid-air bounce attack dealing 2 HP damage"
+        }
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "TJ-Dev-Studio",
+        "url": "https://github.com/TJ-Dev-Studio"
+      },
+      "image": "https://frogmog.fun/assets/frogmog-logo.jpg",
+      "screenshot": [
+        "https://frogmog.fun/assets/frogmog-showcase.png",
+        "https://frogmog.fun/assets/frogdriver.png",
+        "https://frogmog.fun/assets/tj-frog-studio.png"
+      ],
+      "datePublished": "2026-03-05",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Organization",
+      "name": "TJ-Dev-Studio",
+      "url": "https://github.com/TJ-Dev-Studio",
+      "sameAs": [
+        "https://github.com/TJ-Dev-Studio",
+        "https://discord.gg/fERb3jRgfC"
+      ],
+      "foundingDate": "2026",
+      "description": "Indie game studio building FrogMog, a 3D multiplayer battle royale for mobile."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is FrogMog?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FrogMog is a chaotic 3D multiplayer battle royale game where up to 100 frogs fight in a shrinking arena called FrogTown. Each frog has 3 HP and three attack types: Jump & Eat (instant kill), Tongue Lash (1 HP ranged), and Stomp (2 HP mid-air). Built with Godot 4 and Nakama server, coming to iOS and Android."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many players can play FrogMog?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FrogMog supports up to 100 players in a single match. All 100 frogs drop into FrogTown simultaneously, and the arena shrinks until one frog remains."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What platforms is FrogMog available on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FrogMog is being built mobile-first for iOS and Android. VR support for Meta Quest 2 is planned for the future."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What game engine does FrogMog use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FrogMog is built with Godot 4.4.1 using pure GDScript, with a Nakama authoritative game server running at 30 ticks per second. The entire game world is declared in JSON with zero hand-placed nodes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does combat work in FrogMog?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FrogMog has three attack types: Jump & Eat (land on a frog from above or behind for an instant kill), Tongue Lash (ranged cone attack dealing 1 HP damage with auto-aim), and Stomp (mid-air bounce dealing 2 HP damage). Each frog has 3 HP, making combat fast and lethal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When does FrogMog release?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FrogMog is currently in active development. The team is working on core movement, the battle royale loop, and the authoritative server. Sign up at frogmog.fun to get notified when playable builds are ready."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is making FrogMog?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FrogMog is developed by TJ-Dev-Studio, an indie game studio. The project is open-source on GitHub at github.com/TJ-Dev-Studio/proto1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is FrogTown in FrogMog?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FrogTown is FrogMog's 200x200 meter game world built in the roots and branches of a colossal ancient Mother Tree. It features 12 NPCs who patrol the market, fish by the pond, and meditate behind a hidden waterfall. FrogTown serves as the battle royale arena that shrinks during matches."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Welcome to FrogMog",
+      "author": {
+        "@type": "Organization",
+        "name": "TJ-Dev-Studio"
+      },
+      "datePublished": "2026-03-05",
+      "publisher": {
+        "@type": "Organization",
+        "name": "TJ-Dev-Studio"
+      },
+      "description": "Introducing FrogMog — a 3D multiplayer battle royale where up to 100 frogs fight in a shrinking arena. Built with Godot 4 and Nakama.",
+      "mainEntityOfPage": "https://frogmog.fun/#blog"
+    }
+  ]
+}
+  </script>
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐸</text></svg>">
 
@@ -49,6 +200,7 @@
         <li><a href="#about">The Game</a></li>
         <li><a href="#gallery">Media</a></li>
         <li><a href="#blog">Dev Log</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="https://discord.gg/fERb3jRgfC" target="_blank" rel="noopener noreferrer" class="nav__discord">Discord</a></li>
         <li><a href="#sponsor" class="nav__sponsor">Support Us</a></li>
         <li><a href="#signup" class="nav__cta">Get Notified</a></li>
@@ -68,8 +220,9 @@
     </div>
     <div class="hero__content">
       <div class="hero__eyebrow">COMING TO iOS &amp; ANDROID</div>
+      <h1 class="sr-only">FrogMog — 3D Multiplayer Battle Royale Game for iOS and Android</h1>
       <img src="assets/frogmog-logo.jpg" alt="FrogMog" class="hero__logo" width="500" height="150">
-      <h1 class="hero__headline">100 FROGS ENTER.<br>ONE FROG LEAVES.</h1>
+      <p class="hero__headline" aria-hidden="true">100 FROGS ENTER.<br>ONE FROG LEAVES.</p>
       <p class="hero__subtitle">A chaotic 3D multiplayer battle royale — built in Godot 4 + Nakama</p>
       <div class="hero__ctas">
         <a href="https://discord.gg/fERb3jRgfC" target="_blank" rel="noopener noreferrer" class="btn btn--discord btn--lg">
@@ -117,14 +270,14 @@
   </section>
 
   <!-- About / The Swamp Section -->
-  <section class="section" id="about">
+  <section class="section" id="about" aria-label="About FrogMog - Gameplay">
     <div class="container">
       <h2 class="section__title">THE SWAMP</h2>
       <p class="section__subtitle">Welcome to FrogTown — a handcrafted frog civilization you'll fight to the death in</p>
 
       <div class="about-grid">
         <div class="about-text">
-          <p>FrogMog drops you into <strong>FrogTown</strong> — a 200×200 meter living world built in the roots and branches of a colossal ancient Mother Tree. 12 NPCs patrol the market, fish by the pond, and meditate behind a hidden waterfall. The world breathes.</p>
+          <p>FrogMog is a 3D multiplayer battle royale game where up to 100 frogs fight in a shrinking arena. Players drop into <strong>FrogTown</strong> — a 200×200 meter living world built in the roots of a colossal Mother Tree — and battle until one frog remains. Built with Godot 4 and Nakama server, FrogMog is coming to iOS and Android.</p>
           <p>Then you walk up to the <strong>FROG MOG sign</strong>, the countdown hits zero, and up to 100 frogs pile into a shrinking arena. The zone closes in. You eat or get eaten.</p>
           <p>Every frog has <strong>3 HP</strong>. You're fragile. You're fast. You have a tongue. Make it count.</p>
         </div>
@@ -167,19 +320,19 @@
   </section>
 
   <!-- Media Gallery Section -->
-  <section class="section section--alt" id="gallery">
+  <section class="section section--alt" id="gallery" aria-label="FrogMog Screenshots and Media">
     <div class="container">
       <h2 class="section__title">SCREENSHOTS</h2>
       <p class="section__subtitle">Early development captures from FrogMog</p>
       <div class="gallery">
         <div class="gallery__item">
-          <img src="assets/frogmog-showcase.png" alt="FrogMog showcase" loading="lazy">
+          <img src="assets/frogmog-showcase.png" alt="FrogMog 3D battle royale gameplay showing frogs in FrogTown arena" loading="lazy">
         </div>
         <div class="gallery__item">
-          <img src="assets/frogdriver.png" alt="FrogMog frog driver" loading="lazy">
+          <img src="assets/frogdriver.png" alt="FrogMog frog character driving a vehicle in-game" loading="lazy">
         </div>
         <div class="gallery__item">
-          <img src="assets/tj-frog-studio.png" alt="TJ Frog Studio" loading="lazy">
+          <img src="assets/tj-frog-studio.png" alt="TJ-Dev-Studio mascot frog in the FrogMog development environment" loading="lazy">
         </div>
       </div>
     </div>
@@ -202,7 +355,7 @@
   </section>
 
   <!-- Dev Blog Section -->
-  <section class="section" id="blog">
+  <section class="section" id="blog" aria-label="FrogMog Development Blog">
     <div class="container">
       <h2 class="section__title">DEV LOG</h2>
       <article class="blog-post">
@@ -237,8 +390,71 @@
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section class="section section--alt" id="faq">
+    <div class="container">
+      <h2 class="section__title">FAQ</h2>
+      <p class="section__subtitle">Everything you need to know about FrogMog</p>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary class="faq-question">What is FrogMog?</summary>
+          <div class="faq-answer">
+            <p>FrogMog is a chaotic 3D multiplayer battle royale game where up to 100 frogs fight in a shrinking arena called FrogTown. Each frog has 3 HP and three attack types: Jump & Eat (instant kill), Tongue Lash (1 HP ranged attack), and Stomp (2 HP mid-air bounce). Built with Godot 4.4.1 and Nakama authoritative server, FrogMog is coming to iOS and Android.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">How many players can play FrogMog at once?</summary>
+          <div class="faq-answer">
+            <p>FrogMog supports up to 100 players in a single match. All frogs drop into FrogTown simultaneously, and the zone shrinks until one frog remains. The Nakama server runs at 30 ticks per second to keep gameplay smooth at scale.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">What platforms will FrogMog be on?</summary>
+          <div class="faq-answer">
+            <p>FrogMog is being built mobile-first for iOS and Android. VR support for Meta Quest 2 is on the roadmap — you'll actually play as the frog in first person.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">What game engine is FrogMog built with?</summary>
+          <div class="faq-answer">
+            <p>FrogMog is built with Godot 4.4.1 using pure GDScript, with a Nakama authoritative game server. The entire world is declared in JSON — zero nodes hand-placed in the editor. Over 551 automated tests validate the codebase.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">How does combat work in FrogMog?</summary>
+          <div class="faq-answer">
+            <p>Every frog has 3 HP and three ways to deal damage:</p>
+            <ul>
+              <li><strong>Jump & Eat</strong> — Land on a frog from above or behind for an instant kill. The signature move.</li>
+              <li><strong>Tongue Lash</strong> — Ranged cone attack with auto-aim. Deals 1 HP damage.</li>
+              <li><strong>Stomp</strong> — Bounce off a frog mid-air. Deals 2 HP damage. Your panic move when the eat fails.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">When does FrogMog come out?</summary>
+          <div class="faq-answer">
+            <p>FrogMog is in active development. The team is locking down core movement, the battle royale loop, and authoritative server networking. Sign up above to get notified when playable builds are ready.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Is FrogMog free to play?</summary>
+          <div class="faq-answer">
+            <p>Pricing hasn't been announced yet. Follow the Discord or sign up for email updates to be the first to know.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Who is TJ-Dev-Studio?</summary>
+          <div class="faq-answer">
+            <p>TJ-Dev-Studio is an indie game development studio building FrogMog. The project is open-source on <a href="https://github.com/TJ-Dev-Studio/proto1" target="_blank" rel="noopener noreferrer">GitHub</a>. You can support development through <a href="https://github.com/sponsors/TJ-Dev-Studio" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- Links Section -->
-  <section class="section section--alt" id="links">
+  <section class="section section--alt" id="links" aria-label="FrogMog Official Links">
     <div class="container">
       <h2 class="section__title">LINKS</h2>
       <div class="links-grid">
@@ -265,7 +481,7 @@
   </section>
 
   <!-- Sponsor Section -->
-  <section class="section section--sponsor" id="sponsor">
+  <section class="section section--sponsor" id="sponsor" aria-label="Support FrogMog Development">
     <div class="container">
       <h2 class="section__title">FUEL THE CHAOS</h2>
       <p class="section__subtitle">FrogMog is indie — built by a small team with big ambitions. Your support keeps the swamp alive.</p>
@@ -321,11 +537,13 @@
         <div class="footer__brand">
           <span class="footer__logo">🐸 FrogMog</span>
           <p class="footer__copy">&copy; 2026 TJ-Dev-Studio. All rights reserved.</p>
+          <p class="footer__updated">Last updated: March 2026</p>
         </div>
         <div class="footer__links">
           <a href="#hero">Home</a>
           <a href="#about">The Game</a>
           <a href="#blog">Dev Log</a>
+          <a href="#faq">FAQ</a>
           <a href="https://discord.gg/fERb3jRgfC" target="_blank" rel="noopener noreferrer">Discord</a>
           <a href="https://github.com/TJ-Dev-Studio/proto1" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="#sponsor">Support</a>

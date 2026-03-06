@@ -829,6 +829,78 @@ strong {
 }
 
 /* ===========================
+   FAQ Section
+   =========================== */
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.faq-item[open] {
+  border-color: var(--green);
+}
+
+.faq-question {
+  padding: 1.25rem 1.5rem;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--green);
+  transition: transform 0.3s;
+}
+
+.faq-item[open] .faq-question::after {
+  content: '\2212';
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.25rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.faq-answer ul {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.faq-answer li {
+  margin-bottom: 0.5rem;
+}
+
+.faq-answer a {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+/* ===========================
    Links Section
    =========================== */
 
@@ -1064,6 +1136,12 @@ strong {
   color: var(--text-dim);
   font-size: 0.85rem;
   margin-top: 0.25rem;
+}
+
+.footer__updated {
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  margin-top: 0.15rem;
 }
 
 .footer__links {
