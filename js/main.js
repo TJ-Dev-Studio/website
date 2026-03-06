@@ -45,7 +45,7 @@
   // Email Signup Form Handler
   // ===========================
 
-  const SIGNUP_API_ENDPOINT = null; // Set to API URL when backend is ready
+  const SIGNUP_API_ENDPOINT = 'https://signup-api.frogmog.zdfop.com/signup';
   const STORAGE_KEY = 'frogmog-signups';
 
   const signupForm = document.getElementById('signup-form');
