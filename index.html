@@ -3,41 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FrogMog — Frog Royale | Coming Soon</title>
-  <meta name="description" content="FrogMog is a chaotic 3D multiplayer battle royale where frogs fight for supremacy. Built in Godot 4. Hop in. Battle out.">
+  <title>FrogMog — 100 Frogs Enter. One Frog Leaves.</title>
+  <meta name="description" content="FrogMog is a chaotic 3D multiplayer battle royale where up to 100 frogs fight to the last hop. Leap. Eat. Survive. Built in Godot 4.">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="FrogMog — Frog Royale">
-  <meta property="og:description" content="A chaotic 3D multiplayer battle royale where frogs fight for supremacy. Built in Godot 4.">
+  <meta property="og:title" content="FrogMog — 100 Frogs Enter. One Frog Leaves.">
+  <meta property="og:description" content="A chaotic 3D multiplayer battle royale where up to 100 frogs fight to the last hop. Built in Godot 4.">
   <meta property="og:image" content="assets/frogmog-logo.svg">
-  <meta property="og:url" content="https://frogmog.tj-dev-studio.com">
+  <meta property="og:url" content="https://frogmog.fun">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="FrogMog — Frog Royale">
-  <meta name="twitter:description" content="A chaotic 3D multiplayer battle royale where frogs fight for supremacy. Built in Godot 4.">
+  <meta name="twitter:title" content="FrogMog — 100 Frogs Enter. One Frog Leaves.">
+  <meta name="twitter:description" content="A chaotic 3D multiplayer battle royale where up to 100 frogs fight to the last hop. Built in Godot 4.">
   <meta name="twitter:image" content="assets/frogmog-logo.svg">
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐸</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@400;500;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Floating chaos stickers -->
+  <div class="sticker sticker--1" aria-hidden="true">💀 RIBBIT!</div>
+  <div class="sticker sticker--2" aria-hidden="true">👅 EAT ME</div>
+  <div class="sticker sticker--3" aria-hidden="true">🐸</div>
+  <div class="sticker sticker--4" aria-hidden="true">☠️ MOG OR BE MOGGED</div>
+
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav__container">
-      <a href="#hero" class="nav__logo">FrogMog</a>
+      <a href="#hero" class="nav__logo">🐸 FrogMog</a>
       <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="nav__toggle-bar"></span>
         <span class="nav__toggle-bar"></span>
         <span class="nav__toggle-bar"></span>
       </button>
       <ul class="nav__links" id="nav-links">
-        <li><a href="#about">About</a></li>
+        <li><a href="#about">The Game</a></li>
         <li><a href="#gallery">Media</a></li>
         <li><a href="#blog">Dev Log</a></li>
-        <li><a href="#links">Links</a></li>
-        <li><a href="#signup" class="nav__cta">Sign Up</a></li>
+        <li><a href="https://discord.gg/fERb3jRgfC" target="_blank" rel="noopener noreferrer" class="nav__discord">Discord</a></li>
+        <li><a href="#sponsor" class="nav__sponsor">Support Us</a></li>
+        <li><a href="#signup" class="nav__cta">Get Notified</a></li>
       </ul>
     </div>
   </nav>
@@ -45,6 +59,7 @@
   <!-- Hero Section -->
   <section class="hero" id="hero">
     <div class="hero__bg">
+      <div class="hero__grid"></div>
       <div class="lily-pad lily-pad--1"></div>
       <div class="lily-pad lily-pad--2"></div>
       <div class="lily-pad lily-pad--3"></div>
@@ -52,21 +67,101 @@
       <div class="lily-pad lily-pad--5"></div>
     </div>
     <div class="hero__content">
-      <img src="assets/frogmog-logo.svg" alt="FrogMog Logo" class="hero__logo" width="400" height="120">
-      <p class="hero__tagline">Hop in. Battle out.</p>
-      <p class="hero__subtitle">A chaotic 3D multiplayer battle royale — built in Godot 4</p>
-      <a href="#signup" class="btn btn--primary btn--lg">Get Notified</a>
+      <div class="hero__eyebrow">COMING TO iOS &amp; ANDROID</div>
+      <img src="assets/frogmog-logo.svg" alt="FrogMog" class="hero__logo" width="500" height="150">
+      <h1 class="hero__headline">100 FROGS ENTER.<br>ONE FROG LEAVES.</h1>
+      <p class="hero__subtitle">A chaotic 3D multiplayer battle royale — built in Godot 4 + Nakama</p>
+      <div class="hero__ctas">
+        <a href="https://discord.gg/fERb3jRgfC" target="_blank" rel="noopener noreferrer" class="btn btn--discord btn--lg">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z"/></svg>
+          Join the Swamp
+        </a>
+        <a href="#signup" class="btn btn--primary btn--lg">Get Notified</a>
+      </div>
+    </div>
+
+    <!-- Scrolling stats ticker -->
+    <div class="hero__ticker">
+      <div class="hero__ticker-inner" aria-hidden="true">
+        <span class="tick-item"><span class="tick-num">100</span> FROGS</span>
+        <span class="tick-sep">✦</span>
+        <span class="tick-item"><span class="tick-num">3</span> HP PER FROG</span>
+        <span class="tick-sep">✦</span>
+        <span class="tick-item"><span class="tick-num">3</span> ATTACK TYPES</span>
+        <span class="tick-sep">✦</span>
+        <span class="tick-item"><span class="tick-num">30</span>Hz SERVER</span>
+        <span class="tick-sep">✦</span>
+        <span class="tick-item"><span class="tick-num">20</span> HATS</span>
+        <span class="tick-sep">✦</span>
+        <span class="tick-item"><span class="tick-num">551</span> TESTS PASSING</span>
+        <span class="tick-sep">✦</span>
+        <span class="tick-item"><span class="tick-num">0</span> HAND-PLACED NODES</span>
+        <span class="tick-sep">✦</span>
+        <!-- duplicate for infinite scroll -->
+        <span class="tick-item"><span class="tick-num">100</span> FROGS</span>
+        <span class="tick-sep">✦</span>
+        <span class="tick-item"><span class="tick-num">3</span> HP PER FROG</span>
+        <span class="tick-sep">✦</span>
+        <span class="tick-item"><span class="tick-num">3</span> ATTACK TYPES</span>
+        <span class="tick-sep">✦</span>
+        <span class="tick-item"><span class="tick-num">30</span>Hz SERVER</span>
+        <span class="tick-sep">✦</span>
+        <span class="tick-item"><span class="tick-num">20</span> HATS</span>
+        <span class="tick-sep">✦</span>
+        <span class="tick-item"><span class="tick-num">551</span> TESTS PASSING</span>
+        <span class="tick-sep">✦</span>
+        <span class="tick-item"><span class="tick-num">0</span> HAND-PLACED NODES</span>
+        <span class="tick-sep">✦</span>
+      </div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- About / The Swamp Section -->
   <section class="section" id="about">
     <div class="container">
-      <h2 class="section__title">About the Game</h2>
-      <div class="about__content">
-        <p>FrogMog is a fast-paced 3D multiplayer battle royale where you play as a frog fighting for survival in a shrinking swamp arena. Leap, tongue-lash, and outmaneuver your opponents in chaotic matches of up to 20 players.</p>
-        <p>Built from the ground up in Godot 4, FrogMog combines tight platformer controls with unpredictable battle royale mechanics. Every match is different — power-ups spawn randomly, the terrain shifts, and only the craftiest frog survives.</p>
-        <p>Whether you're ambushing from a lily pad or dodging across quicksand, FrogMog delivers pure multiplayer chaos with a ribbit.</p>
+      <h2 class="section__title">THE SWAMP</h2>
+      <p class="section__subtitle">Welcome to FrogTown — a handcrafted frog civilization you'll fight to the death in</p>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>FrogMog drops you into <strong>FrogTown</strong> — a 200×200 meter living world built in the roots and branches of a colossal ancient Mother Tree. 12 NPCs patrol the market, fish by the pond, and meditate behind a hidden waterfall. The world breathes.</p>
+          <p>Then you walk up to the <strong>FROG MOG sign</strong>, the countdown hits zero, and up to 100 frogs pile into a shrinking arena. The zone closes in. You eat or get eaten.</p>
+          <p>Every frog has <strong>3 HP</strong>. You're fragile. You're fast. You have a tongue. Make it count.</p>
+        </div>
+
+        <div class="about-mechanics">
+          <h3 class="mechanics-title">HOW YOU KILL</h3>
+          <div class="mechanic-card">
+            <span class="mechanic-icon">🍽️</span>
+            <div class="mechanic-info">
+              <div class="mechanic-header">
+                <strong>Jump &amp; Eat</strong>
+                <span class="mechanic-badge mechanic-badge--kill">INSTANT KILL</span>
+              </div>
+              <p>Land on a frog from above or behind. The signature move.</p>
+            </div>
+          </div>
+          <div class="mechanic-card">
+            <span class="mechanic-icon">👅</span>
+            <div class="mechanic-info">
+              <div class="mechanic-header">
+                <strong>Tongue Lash</strong>
+                <span class="mechanic-badge mechanic-badge--dmg">1 HP</span>
+              </div>
+              <p>Ranged cone attack with auto-aim. Poke from distance, finish with eat.</p>
+            </div>
+          </div>
+          <div class="mechanic-card">
+            <span class="mechanic-icon">🦶</span>
+            <div class="mechanic-info">
+              <div class="mechanic-header">
+                <strong>Stomp</strong>
+                <span class="mechanic-badge mechanic-badge--dmg">2 HP</span>
+              </div>
+              <p>Bounce off a frog mid-air. Panic move when the eat fails.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -74,7 +169,7 @@
   <!-- Media Gallery Section -->
   <section class="section section--alt" id="gallery">
     <div class="container">
-      <h2 class="section__title">Screenshots</h2>
+      <h2 class="section__title">SCREENSHOTS</h2>
       <p class="section__subtitle">Early development captures from FrogMog</p>
       <div class="gallery">
         <div class="gallery__item">
@@ -90,10 +185,26 @@
     </div>
   </section>
 
+  <!-- Discord CTA Section -->
+  <section class="section section--discord" id="community">
+    <div class="container">
+      <div class="discord-cta">
+        <div class="discord-cta__text">
+          <h2 class="discord-cta__title">JOIN THE SWAMP</h2>
+          <p>Get dev updates, be first in line for playtesting, and talk frog strategy with the team.</p>
+        </div>
+        <a href="https://discord.gg/fERb3jRgfC" target="_blank" rel="noopener noreferrer" class="btn btn--discord btn--lg">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z"/></svg>
+          discord.gg/fERb3jRgfC
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Dev Blog Section -->
   <section class="section" id="blog">
     <div class="container">
-      <h2 class="section__title">Dev Log</h2>
+      <h2 class="section__title">DEV LOG</h2>
       <article class="blog-post">
         <header class="blog-post__header">
           <h3 class="blog-post__title">Welcome to FrogMog</h3>
@@ -106,19 +217,19 @@
           </div>
         </header>
         <div class="blog-post__body">
-          <p>We're thrilled to officially announce <strong>FrogMog</strong> — a 3D multiplayer battle royale game where frogs duke it out in an ever-shrinking swamp arena. This has been a passion project for us, and we're finally ready to share it with the world.</p>
+          <p>We're ready to share <strong>FrogMog</strong> — a 3D multiplayer battle royale where up to 100 frogs duke it out in an ever-shrinking arena. This has been a passion project for us, and it's time to let the swamp out.</p>
 
           <h4>The Concept</h4>
-          <p>The idea started simple: what if battle royale games had more personality? We wanted something that felt chaotic and fun from the moment you drop in. Frogs were the perfect fit — they leap, they're fast, they have tongues that can grab things. The mechanics practically write themselves.</p>
+          <p>100 frogs enter. One frog leaves. The arena starts as <strong>FrogTown</strong> — a living 200×200 meter world built in the roots of an ancient Mother Tree. NPCs wander the market stalls, fish at the pond, meditate behind a hidden waterfall. Then the match starts, and everything turns into chaos.</p>
 
-          <h4>Why Godot 4?</h4>
-          <p>We chose Godot 4 as our engine for its open-source philosophy, excellent 3D capabilities, and the incredible community behind it. The new GDExtension system lets us optimize performance-critical code in C++ while keeping gameplay logic in GDScript for rapid iteration.</p>
+          <h4>The Tech</h4>
+          <p>FrogMog is built on <strong>Godot 4.4.1</strong> (pure GDScript) with a <strong>Nakama</strong> authoritative game server running at 30 ticks per second. The entire world is declared in JSON — not a single node was hand-placed in an editor. 551 automated tests prove it works.</p>
 
-          <h4>Multiplayer Chaos</h4>
-          <p>FrogMog supports up to 20 players in a single match. The arena starts as a sprawling swamp with lily pads, logs, mud pits, and hidden power-ups. As the match progresses, the safe zone shrinks — forcing frogs into tighter and tighter confrontations. Last frog standing wins.</p>
+          <h4>Platforms</h4>
+          <p>FrogMog launches on <strong>iOS and Android</strong>, mobile-first. VR mode for Meta Quest 2 is on the roadmap — you'll actually be the frog.</p>
 
           <h4>What's Next</h4>
-          <p>We're deep in prototyping right now, nailing down the core movement and combat mechanics. Sign up below to get notified when we have playable builds ready for testing. We'd love to have you in the swamp.</p>
+          <p>We're deep in development, locking down core movement, the battle royale loop, and the authoritative server. Sign up below to get notified when playable builds are ready. We'd love to have you in the swamp.</p>
 
           <p><em>— The TJ-Dev-Studio team</em></p>
         </div>
@@ -129,7 +240,7 @@
   <!-- Links Section -->
   <section class="section section--alt" id="links">
     <div class="container">
-      <h2 class="section__title">Links</h2>
+      <h2 class="section__title">LINKS</h2>
       <div class="links-grid">
         <a href="https://github.com/TJ-Dev-Studio/proto1" class="link-card" target="_blank" rel="noopener noreferrer">
           <div class="link-card__icon">
@@ -140,15 +251,43 @@
             <p>TJ-Dev-Studio/proto1</p>
           </div>
         </a>
-        <a href="#" class="link-card link-card--disabled">
+        <a href="https://discord.gg/fERb3jRgfC" class="link-card link-card--discord" target="_blank" rel="noopener noreferrer">
           <div class="link-card__icon">
-            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.947 2.418-2.157 2.418z"/></svg>
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z"/></svg>
           </div>
           <div class="link-card__text">
             <h3>Discord</h3>
-            <p>Coming soon</p>
+            <p>Join the community</p>
           </div>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsor Section -->
+  <section class="section section--sponsor" id="sponsor">
+    <div class="container">
+      <h2 class="section__title">FUEL THE CHAOS</h2>
+      <p class="section__subtitle">FrogMog is indie — built by a small team with big ambitions. Your support keeps the swamp alive.</p>
+      <div class="sponsor-grid">
+        <div class="sponsor-card">
+          <div class="sponsor-card__icon">💖</div>
+          <h3>GitHub Sponsors</h3>
+          <p>Monthly or one-time — every contribution goes directly towards server costs, art, and getting this game into your hands faster.</p>
+          <a href="https://github.com/sponsors/TJ-Dev-Studio" target="_blank" rel="noopener noreferrer" class="btn btn--sponsor">
+            ♥ &nbsp;Sponsor on GitHub
+          </a>
+        </div>
+        <div class="sponsor-perks">
+          <h3 class="perks-title">YOUR SUPPORT FUNDS</h3>
+          <ul class="perks-list">
+            <li>🖥️ Nakama game server infrastructure</li>
+            <li>🎨 Art assets &amp; animations</li>
+            <li>📱 iOS &amp; Android builds and device testing</li>
+            <li>🌍 Regional server expansion</li>
+            <li>🐸 More hats (the important stuff)</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -156,7 +295,7 @@
   <!-- Email Signup Section -->
   <section class="section" id="signup">
     <div class="container">
-      <h2 class="section__title">Stay in the Loop</h2>
+      <h2 class="section__title">STAY IN THE LOOP</h2>
       <p class="section__subtitle">Sign up to get notified when FrogMog is ready for playtesting.</p>
       <form class="signup-form" id="signup-form">
         <div class="signup-form__fields">
@@ -180,15 +319,16 @@
     <div class="container">
       <div class="footer__content">
         <div class="footer__brand">
-          <span class="footer__logo">FrogMog</span>
+          <span class="footer__logo">🐸 FrogMog</span>
           <p class="footer__copy">&copy; 2026 TJ-Dev-Studio. All rights reserved.</p>
         </div>
         <div class="footer__links">
           <a href="#hero">Home</a>
-          <a href="#about">About</a>
-          <a href="#gallery">Media</a>
+          <a href="#about">The Game</a>
           <a href="#blog">Dev Log</a>
+          <a href="https://discord.gg/fERb3jRgfC" target="_blank" rel="noopener noreferrer">Discord</a>
           <a href="https://github.com/TJ-Dev-Studio/proto1" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="#sponsor">Support</a>
         </div>
       </div>
     </div>
