@@ -624,6 +624,195 @@ strong {
 }
 
 /* ===========================
+   Game Modes Section
+   =========================== */
+
+.modes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.mode-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
+  position: relative;
+}
+
+.mode-card:hover {
+  border-color: rgba(0, 255, 65, 0.35);
+  box-shadow: 0 4px 24px rgba(0, 255, 65, 0.07);
+  transform: translateY(-3px);
+}
+
+.mode-card--featured {
+  border-color: rgba(0, 255, 65, 0.3);
+  background: linear-gradient(135deg, rgba(0, 255, 65, 0.05) 0%, var(--surface) 60%);
+}
+
+.mode-card--featured:hover {
+  border-color: var(--green);
+  box-shadow: 0 4px 30px rgba(0, 255, 65, 0.15);
+}
+
+.mode-card__badge {
+  font-family: var(--font-mono);
+  font-size: 0.45rem;
+  color: var(--green);
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  background: rgba(0, 255, 65, 0.1);
+  border: 1px solid rgba(0, 255, 65, 0.25);
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.mode-card__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.mode-card__genre {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  color: var(--green);
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.mode-card__desc {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.modes-pipeline {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+/* ===========================
+   Express Yourself / Customize Section
+   =========================== */
+
+.customize-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.customize-item {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: border-color var(--transition-base), transform var(--transition-base);
+}
+
+.customize-item:hover {
+  border-color: rgba(0, 255, 65, 0.3);
+  transform: translateY(-3px);
+}
+
+.customize-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.customize-item h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.customize-item p {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ===========================
+   Streamer Chaos Section
+   =========================== */
+
+.section--streamer {
+  background: linear-gradient(135deg, rgba(139, 0, 255, 0.06) 0%, var(--bg) 60%);
+  border-top: 1px solid rgba(139, 0, 255, 0.15);
+  border-bottom: 1px solid rgba(139, 0, 255, 0.15);
+}
+
+.section--streamer .section__title::after {
+  background: var(--purple);
+  box-shadow: 0 0 12px rgba(139, 0, 255, 0.5);
+}
+
+.streamer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+  align-items: start;
+}
+
+.streamer-commands {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cmd-item {
+  padding: 0.85rem 1.1rem;
+  background: var(--surface);
+  border: 1px solid rgba(139, 0, 255, 0.2);
+  border-radius: 8px;
+  color: var(--text-mid);
+  font-size: 0.95rem;
+  transition: border-color var(--transition-base);
+}
+
+.cmd-item:hover {
+  border-color: rgba(139, 0, 255, 0.5);
+}
+
+.cmd-name {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  color: var(--purple);
+  margin-right: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.streamer-text p {
+  color: var(--text-mid);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.streamer-quote {
+  font-style: italic;
+  color: var(--purple) !important;
+  border-left: 3px solid var(--purple);
+  padding-left: 1rem;
+}
+
+/* ===========================
    Gallery Section
    =========================== */
 
@@ -1228,6 +1417,15 @@ strong {
 
   .blog-post__title {
     font-size: 1.6rem;
+  }
+
+  .modes-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .streamer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .sponsor-grid {
